@@ -17,7 +17,7 @@
 
 [Youtube][anchor-ad]
 
-[主播广告]： https ://youtube.com/channel/UC6xaYNw86NSyb9DsApHdvRw
+[anchor-ad]： https ://youtube.com/channel/UC6xaYNw86NSyb9DsApHdvRw
 
 
 关注83G_official喵
