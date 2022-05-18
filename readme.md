@@ -15,9 +15,10 @@
 [anchor-od]: https://twitter.com/83gOfficial?s=20&t=ooqqAv_1J6F_giL4V4KltA
 
 
-[Youtube][anchor-ad]
+[Youtube][anchor-d]
 
-[anchor-ad]： https ://youtube.com/channel/UC6xaYNw86NSyb9DsApHdvRw
+
+[anchor-d]:https://youtube.com/channel/UC6xaYNw86NSyb9DsApHdvRw
 
 
 关注83G_official喵
