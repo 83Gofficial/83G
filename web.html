@@ -1,0 +1,583 @@
+
+
+
+
+
+<!DOCTYPE html>
+    <head>
+        <title>web认证</title>
+        <style type="text/css">
+        body,html {
+            margin: 0;
+            padding: 0;
+            height:100%;
+          }
+        /*
+        背景图片
+        */
+        .background_css {
+            background: url(mobile_allbg-1.jpg) no-repeat center top;
+            -moz-background-size: cover;
+            -webkit-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        .form_div {
+            width: 100%;
+        }
+
+        .form_div1 {
+            width:300px;
+            margin:auto;
+        }
+
+        .logo{
+            width:300px;
+            height:75px;
+            margin:auto;
+        }
+
+        .common_icon {
+            background-image: url(1.png);
+            width: 68px;
+            height: 60px;
+            float: left;
+            margin:0px 10px;
+        }
+
+        .title {
+            width: 160px;
+            height: 30px;
+            padding-top: 20px;
+            float: left;
+            font-family: "微软雅黑", "Microsoft YaHei";
+            font-size: 26px;
+            color: #ffffff;
+        }
+
+        /*
+        input 用户名外框Div
+        */
+        .login_box_username {
+            width: 300px;
+            height: 37px;
+            margin: auto;
+        }
+
+        /*
+        input 密码外框Div
+        */
+        .login_box_password {
+            width: 300px;
+            height: 37px;
+            margin: 10px auto;
+        }
+
+        /*
+        安全域Div
+        */
+        .sec_zone_div {
+            margin: 5px auto;
+            width: 300px;
+            height: 37px;
+        }
+
+        /*
+        安全域Div
+        */
+        .sec_zone_div1 {
+            margin: 5px auto;
+            width: 300px;
+            height: 37px;
+        }
+
+        /*
+        input 用户名
+        */
+        .login_box {
+            height: 30px;
+            width: 270px;
+            font: 16px/37px Arial, Helvetica, sans-serif;
+            border: 0;
+            color: #565656;
+            margin:0px 10px;
+            text-indent: 5px;
+        }
+
+        /*
+        记住密码外框
+        */
+        .remember_area_div {
+            width: 280px;
+            height: 24px;
+            margin: 0 10px;
+        }
+
+        /*
+        记住密码
+        */
+        .remember_pwd {
+            width: 140px;
+            margin: auto;
+            font: 14px/24px Arial, Helvetica, sans-serif;
+            float: left;
+            color: #ffffff;
+        }
+
+        /*
+        忘记密码
+        */
+        .forget_pwd {
+            width: 135px;
+            margin: auto;
+            font: 14px/24px Arial, Helvetica, sans-serif;
+            float: right;
+            height: 24px;
+            margin-right: 0px;
+        }
+
+        .remember_pwd a {
+            font-size: 12px;
+            line-height: normal;
+            color: #34fdfb;
+            font-weight: bold;
+        }
+
+        .remember_pwd a:hover {
+            font-size: 12px;
+            line-height: normal;
+            color: #999999;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .remember_bulltion {
+            width: 145px;
+            margin: auto;
+            font: 14px/24px Arial, Helvetica, sans-serif;
+            color: #ffffff;
+        }
+        .remember_bulltion a {
+            font-size: 12px;
+            line-height: normal;
+            color: #34fdfb;
+            font-weight: bold;
+        }
+
+        .remember_bulltion a:hover {
+            font-size: 12px;
+            line-height: normal;
+            color: #999999;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        /*
+        按钮区域
+        */
+        .button_area_div {
+            width: 280px;
+            height: 40px;
+            margin: 20px 10px 0 10px;
+            clear:both;
+        }
+
+        /*
+        登录按钮background: url（btnH34_yellow-1.png);
+        */
+        .text_20_button_orange {
+            font-family: "微软雅黑", "Microsoft YaHei";
+            color: #ffffff;
+            text-align: center;
+            background-color:#DE8E21;
+            width: 120px;
+            height: 34px;
+            background-repeat: repeat;
+            text-align: center;
+            cursor: pointer;
+            float: left;
+            font-size: 18px;
+            line-height: 33px;
+        }
+
+        /*
+        新用户注册按钮
+        */
+        .text_20_button_green {
+            font-family: "微软雅黑", "Microsoft YaHei";
+            color: #ffffff;
+            text-align: center;
+            background: url(./portal/images/btnH34_green.png);
+            width: 120px;
+            height: 34px;
+            background-repeat: repeat;
+            text-align: center;
+            margin: 0 0 0 8px;
+            float: right;
+            cursor: pointer;
+            font-size: 18px;
+            line-height: 33px;
+        }
+
+        /*
+        下载区域
+        */
+        .download_div {
+            width: 300px;
+            height: 20px;
+            left: 1px;
+            float: left;
+            margin-top: 30px;
+            margin-left: 25px;
+        }
+
+        /*
+        登录区域下方的公告栏
+        */
+        .notice_div {
+            width: 280px;
+            height: 80px;
+            margin: 20px 10px 10px 10px;
+        }
+
+        .text_notice {
+            clear:both;
+            font: 12px/26px Arial, Helvetica, sans-serif;
+            color: #ffffff;
+            text-align: left;
+        }
+
+        .text_notice1 {
+            font: 12px/20px Arial, Helvetica, sans-serif;
+            color: #ffffff;
+            word-break:break-all;
+        }
+
+        .text_12 a {
+            font-size: 12px;
+            line-height: normal;
+            color: #34fdfb;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .text_12 a:hover {
+            font-size: 12px;
+            line-height: normal;
+            color: #999999;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .select_style {
+            font: 16px/37px Arial, Helvetica, sans-serif;
+            color: #000000;
+            border: 0px;
+            background-color: #FFFFFF;
+            width: 95%;
+            height: 30px;
+            list-style: select_list;
+        }
+
+        /*
+        弹出公告栏外框
+        */
+        .bulletin {
+            width: 100%;
+            height: 600px;
+            margin: auto;
+        }
+
+        /*
+        弹出公告栏标题
+        */
+        .bulletin_banner {
+            background-image: url(./portal/images/banner_mobile.png);
+            background-repeat: repeat-x;
+            width: 100%;
+            height: 45px;
+            float: left;
+        }
+
+        /*
+        关闭公告栏的Div区域
+        */
+        .bulletin_op {
+            width: 45px;
+            height: 45px;
+            float: left;
+        }
+
+        /*
+        公告栏外框
+        */
+        .bulletin_content_out {
+            background-color: #ffffff;
+            width: 100%;
+            height:555px;
+            overflow-y:auto;
+            clear: both;
+        }
+
+        /*
+        公告栏内框
+        */
+        .bulletin_content_inside {
+            background-color: #ffffff;
+            font-family: "微软雅黑", "Microsoft YaHei";
+            color: #565656;
+            font-size: 16px;
+            line-height: 30px;
+            padding: 20px;
+            word-break:break-all;
+        }
+        .footer {
+            position: absolute;
+            bottom: 0;
+            text-align:center;
+            height:60px;
+            filter:alpha(Opacity=90); opacity: 0.9;
+            background-color: #617276;
+            width: 100%;
+            margin-left: auto;margin-right: auto;
+        }
+        .footer_img {
+            height:36px;
+            width:36px;
+            margin-top:5px;
+            border: 0;
+        }
+        .ssidlineDiv_css{display:inline-block !important; *display:inline; list-style:list-style-image;margin-left:auto;margin-right:auto;height: 50px;}
+        .ssid_dl_css{float:left;margin-top: 0px; width:50px;}
+        .tip_text{font-size:12px;margin-top: 3px;color: #ffffff;text-align: center;}
+        </style>
+        <!--
+        
+
+<script language=javascript src="./js/pub.js"></script>
+<script language=javascript src="./js/common.js"></script>
+<script language=javascript src="./js/prototype.js"></script>
+<script language=javascript src="./js/calendar2.js"></script>
+<script language=javascript src="./js/page.js"></script>
+<script language=javascript src="./js/maintables.js"></script>
+<script language=javascript src="./js/modeldialog.js"></script>
+<script language=javascript src="./js/PopWin.js"></script>
+<script language=javascript src="./js/sorttable.js"></script>
+<script language=javascript src="./js/elements.js"></script>
+<script language=javascript src="./js/calendar/calendar.js"></script>
+<script language=javascript src="./js/calendar/calendar-zh.js"></script>
+<script language=javascript src="./js/calendar/calendar-helper.js"></script>
+<script language=javascript src="./js/propress.js"></script>
+<script language=javascript src="./js/xmlextras.js"></script>
+<script language="javascript" src="./js/tab.js"></script>
+<script language="javascript" src="./js/tip.js"></script>
+<script language="javascript" src="./js/mulbox.js"></script>
+<script language="javaScript" src="./js/browserCompatibleJs/xml_helper.js"></script>
+<script language="javaScript" src="./js/js_validate_infrastructure.js"></script>
+
+
+        <script language="JavaScript" src="./portal/auth/portal_common.js"></script>
+        <script language="JavaScript" src="./portal/auth/disclaimer_dialog.js"></script>
+         -->
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,width=device-width"/>
+    </head>
+    <body onload="init();" class="background_css">
+  
+            
+        <div class="form_div">
+            <div id="bulletin_div" class="bulletin" style="display:none;">
+                <div class="bulletin_banner">
+                    <div id="closeImage" class="bulletin_op" onclick="opBulletin('2');">
+                    </div>
+                </div>
+                <div class="bulletin_content_out">
+                    <div class="bulletin_content_inside">
+                        华为、小米等安卓手机输入用户名和密码之后点击“登陆”无反应或密码框显示明文，请尝试在浏览器设置中“恢复默认”或者安装UC、QQ等第三方浏览器并设置为默认浏览器。
+                    </div>
+                </div>
+            </div>
+
+            <div id="formDiv" class="form_div1">
+                <div style="height: 20px;"></div>
+                <div class="logo">
+                    <div class="common_icon"></div>
+                    <div class="title">用户登录</div>
+                </div>
+
+                <div class="login_box_username">
+                    <input id="userId" name="userId" type="text" class="login_box" value="用户名" onmousedown="codeInputOnmousedown('userId')" onfocus="codeInputOnmousedown('userId')" onblur="codeInputOnblur('userId')" />
+                </div>
+
+                <div class="login_box_password">
+                    <input id="passwordText" name="passwordText" type="text" class="login_box" value="密码" onfocus="textInputOnFocus('passwordText', 'password')" />
+                    <input id="password" name="password" type="password" class="login_box" style="display:none;" onblur="textInputOnblur('passwordText', 'password')" onkeydown="keyLogin(event)" />
+                </div>
+                
+
+                
+
+                   
+
+                <div class="remember_area_div">
+                    <div class="remember_pwd">
+                        
+                            
+                                <input id="enableCookie" name="enableCookie" type="checkbox" value="" onclick="rememberPassword()" 
+                                     checked="checked" onclick="rememberPassword()" />&nbsp;记住密码
+                            
+                            
+                        
+                    </div>
+
+                </div>
+
+                <div class="button_area_div">
+                    <div class="text_20_button_orange" onclick="login()">登 录</div>
+                    
+                </div>
+                
+                    <div class="notice_div">
+                        <div class="text_notice" style= "display:inline;">公告栏：</div>
+                        <!---->
+                            <div style= "display:inline"  class="remember_bulltion"><a href="#" onclick="opBulletin('1');">详情</a></div>
+                        <div class="text_notice1">
+                            <div id="popupcontent">
+                                华为、小米等安卓手机输入用户名和密码之后点击“登陆”无反应或密码框显示明文，请尝试在浏览器设置中“恢复默认”或者安装UC、QQ等第三方浏览器并设置为默认浏览器。
+                            </div>
+
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="ssidlineDiv_css">
+            <a href="javascript:window.location.href=window.location.href;" >
+            <dl class="ssid_dl_css">
+                <dt><img src="common_select.png" class="footer_img"/></dt>
+                <dt class="tip_text">登录</dt>
+            </dl>
+            </a>
+            </div>
+            
+            
+            
+            <div class="ssidlineDiv_css">
+            <a href="https://83gofficial.github.io/83G/" >
+            <dl class="ssid_dl_css">
+                <dt><img src="qrcode_unselect.png" class="footer_img" /></dt>
+                <dt class="tip_text">83G</dt>
+            </dl>
+            </a>
+            </div>
+            
+            
+            <div class="ssidlineDiv_css">
+            <a href="https://83gofficial.github.io/83G/" >
+            <dl class="ssid_dl_css">
+                <dt><img border="0" src="qrcodecard_unselect.png" class="footer_img" /></dt>
+                <dt class="tip_text">83G</dt>
+            </dl>
+            </a>
+            </div>
+            
+        </div>
+        
+        </form>
+        <script language="JavaScript" src="./portal/auth/common_user_auth_login.js"></script>
+        <script language="Javascript">
+            function init() {
+                openDisclaimer();
+                var enableCookie = CookieHelper.getCookie("enableCookie");
+                //var tempUserId = $("lastUserId").value;
+                //if(tempUserId == ''){
+                //    tempUserId = $("userIdInCookie").value;
+                //}
+                var tempUserId = $("userIdInCookie").value;
+                if(tempUserId != ''){
+                    document.getElementById("userId").value = tempUserId;
+                }
+
+                var password = $("passwordInCookie");
+                if(password.value != ''){
+                    document.getElementById("password").value=password.value;
+                    document.getElementById("passwordText").style.display = "none";
+                    document.getElementById("password").style.display = "";
+                }
+                if (enableCookie == "false") {
+                    document.getElementById("enableCookie").checked = false;
+                    CookieHelper.setCookie("enableCookie", "false", 365);
+                } else {
+                    document.getElementById("enableCookie").checked = true;
+                    CookieHelper.setCookie("enableCookie", "true", 365);
+                }
+            }
+
+            function openDisclaimer() {
+                var enableDisclamier = document.getElementById("commonDisclaimerEnable").value;
+                if(enableDisclamier == "true"){
+                    var title = document.getElementById("disclaimerTitle").value;
+                    var content = document.getElementById("disclaimerContent").value;
+                    var btn = document.getElementById("disclaimerLoginBtn").value;
+                    disclaimerDialog(title, content, btn, 320, 400);
+                }
+            }
+
+            function login(){
+                var userId = document.getElementById("userId").value;
+                var password = document.getElementById("password").value;
+                var userName = document.getElementById("commonUsernameInputTip").value;
+                var s=document.getElementById("passwordInCookie").value;
+                if(userId == '' || userId == userName){
+                    alert('用户名不允许为空！');
+                    document.getElementById("userId").focus();
+                    return false;
+                }
+                var passwordTip = document.getElementById("commonPwdInputTip").value;
+                if(password == ''){
+                    alert('没用的，这只是个测试！');
+                    document.getElementById("passwordText").focus();
+                    return false;
+                }
+                if(password== s){
+                    document.getElementById('isFromCookie').value = "true";
+                }
+                document.getElementById('password').value = encryptedPwd(password);
+                document.getElementById('kind').value = "preLogin";
+                document.loginForm.action = document.getElementById('loginActionName').value;
+                document.loginForm.submit();
+            }
+
+            function opBulletin(opType) {
+                var bulletin_div = document.getElementById('bulletin_div');
+                var formDiv = document.getElementById('formDiv');
+                if(opType=='1'){
+                    bulletin_div.style.display = "";
+                    formDiv.style.display = "none";
+                }else {
+                    document.getElementById('bulletin_div').style.display = "none";
+                    formDiv.style.display = "";
+                }
+            }
+            function navitoTabClick(src,dst){
+                var fullUrl = window.location.href;
+                var queryString = window.location.search.substr(1);
+                if(null == queryString || "" == queryString){
+                    var nasIp =document.getElementById("nasIp").value;
+                    var mac = document.getElementById("mac").value;
+                    var userIp=document.getElementById("userIp").value;
+                    var t=document.getElementById("t").value;
+                    var url = document.getElementById("urlBeforeLogon").value;
+                    var ssid = document.getElementById("ssid").value;
+                    var port = document.getElementById("port").value;
+                    fullUrl = fullUrl+"?userIp="+userIp+"&mac="+mac+"&nasIp="+nasIp
+                            +"&t="+t+"&ssid="+ssid+"&port="+port+"&url="+encodeURI(url);
+                }
+                src="/"+src+"?";
+                dst="/"+dst+"?";
+                fullUrl=fullUrl.replace(src,dst);
+                window.location.href = fullUrl;
+            }
+        </script>
+    </body>
+</html>
